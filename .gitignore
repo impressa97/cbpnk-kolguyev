@@ -1,0 +1,8 @@
+.DS_Store
+scripts/__pycache__/
+server/profile/
+server/install/
+hq/.env
+hq/database/*.sqlite
+hq/database/*.sqlite-journal
+hq/storage/logs/*.log

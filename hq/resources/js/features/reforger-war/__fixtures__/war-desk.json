@@ -1,0 +1,2552 @@
+{
+    "world_size": 12800,
+    "squad_strength": 4,
+    "capture_radius": 150,
+    "max_squads": 10,
+    "ai_limit": 192,
+    "enlisted_side": "us",
+    "session": {
+        "open": true,
+        "starts_at": "2026-10-11T12:00:00+00:00",
+        "ends_at": "2026-10-18T12:00:00+00:00",
+        "seconds_left": 604800
+    },
+    "sides": [
+        {
+            "id": "us",
+            "name": "US",
+            "detail": "BLUFOR. Home is Villa, on the west coast. The airfield is south of it.",
+            "squads": 3,
+            "commanders": 1,
+            "home": {
+                "x": 1951,
+                "z": 7401
+            }
+        },
+        {
+            "id": "ussr",
+            "name": "USSR",
+            "detail": "OPFOR. Home is Kamensk, in the northeast. Military HQ sits inland.",
+            "squads": 1,
+            "commanders": 1,
+            "home": {
+                "x": 11867,
+                "z": 10680
+            }
+        },
+        {
+            "id": "fia",
+            "name": "FIA",
+            "detail": "INDFOR. Home is Ugoldar, the southern works. Hamertin and Michurino are inland.",
+            "squads": 0,
+            "commanders": 0,
+            "home": {
+                "x": 6642,
+                "z": 3907
+            }
+        }
+    ],
+    "squads": [
+        {
+            "id": 1,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "Alpha",
+            "side": "us",
+            "strength": 3,
+            "alive": 3,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 5000.0,
+            "z": 6000.0,
+            "mine": true,
+            "managed": false,
+            "task_id": null,
+            "condition": {
+                "field": 3,
+                "reserve": 0,
+                "wounded": 1,
+                "low_ammo": 0,
+                "under_fire": 1,
+                "morale": 48,
+                "health": 90
+            },
+            "combat": "free",
+            "combat_actual": "free",
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": "move"
+        },
+        {
+            "id": 2,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "Bravo",
+            "side": "us",
+            "strength": 0,
+            "alive": 0,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": false,
+            "task_id": null,
+            "condition": {
+                "field": 0,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": null,
+                "health": null
+            },
+            "combat": "free",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        },
+        {
+            "id": 3,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "Charlie",
+            "side": "us",
+            "strength": 0,
+            "alive": 0,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": false,
+            "task_id": null,
+            "condition": {
+                "field": 0,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": null,
+                "health": null
+            },
+            "combat": "free",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        },
+        {
+            "id": 4,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "Delta",
+            "side": "us",
+            "strength": 0,
+            "alive": 0,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": false,
+            "task_id": null,
+            "condition": {
+                "field": 0,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": null,
+                "health": null
+            },
+            "combat": "free",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        },
+        {
+            "id": 5,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "Echo",
+            "side": "us",
+            "strength": 0,
+            "alive": 0,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": false,
+            "task_id": null,
+            "condition": {
+                "field": 0,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": null,
+                "health": null
+            },
+            "combat": "free",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        },
+        {
+            "id": 6,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "Foxtrot",
+            "side": "us",
+            "strength": 0,
+            "alive": 0,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": false,
+            "task_id": null,
+            "condition": {
+                "field": 0,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": null,
+                "health": null
+            },
+            "combat": "free",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        },
+        {
+            "id": 7,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "Golf",
+            "side": "us",
+            "strength": 0,
+            "alive": 0,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": false,
+            "task_id": null,
+            "condition": {
+                "field": 0,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": null,
+                "health": null
+            },
+            "combat": "free",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        },
+        {
+            "id": 8,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "Hotel",
+            "side": "us",
+            "strength": 0,
+            "alive": 0,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": false,
+            "task_id": null,
+            "condition": {
+                "field": 0,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": null,
+                "health": null
+            },
+            "combat": "free",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        },
+        {
+            "id": 9,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "India",
+            "side": "us",
+            "strength": 0,
+            "alive": 0,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": false,
+            "task_id": null,
+            "condition": {
+                "field": 0,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": null,
+                "health": null
+            },
+            "combat": "free",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        },
+        {
+            "id": 10,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "Juliet",
+            "side": "us",
+            "strength": 0,
+            "alive": 0,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": false,
+            "task_id": null,
+            "condition": {
+                "field": 0,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": null,
+                "health": null
+            },
+            "combat": "free",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        },
+        {
+            "id": 21,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "HQ Alpha",
+            "side": "us",
+            "strength": 1,
+            "alive": 1,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": true,
+            "task_id": null,
+            "condition": {
+                "field": 1,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": 60,
+                "health": 100
+            },
+            "combat": "hold",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        },
+        {
+            "id": 22,
+            "commander_id": 1,
+            "name": "cruickshank.toney",
+            "label": "HQ Bravo",
+            "side": "us",
+            "strength": 4,
+            "alive": 4,
+            "tier": 0,
+            "tier_name": "Green",
+            "train_cost": 60,
+            "train_name": "Regular",
+            "x": 1951.0,
+            "z": 7401.0,
+            "mine": true,
+            "managed": true,
+            "task_id": 1,
+            "condition": {
+                "field": 4,
+                "reserve": 0,
+                "wounded": 0,
+                "low_ammo": 0,
+                "under_fire": 0,
+                "morale": 60,
+                "health": 100
+            },
+            "combat": "free",
+            "combat_actual": null,
+            "formation": "auto",
+            "alert": "normal",
+            "pace": "auto",
+            "doing": null
+        }
+    ],
+    "orders": [
+        {
+            "id": 5,
+            "squad_id": 22,
+            "soldier_id": null,
+            "vehicle_id": null,
+            "follow_squad_id": null,
+            "route": [],
+            "kind": "defend",
+            "status": "pending",
+            "x2": null,
+            "z2": null,
+            "x": 4000.0,
+            "z": 4000.0,
+            "target": null,
+            "note": "",
+            "effect_until": null
+        },
+        {
+            "id": 4,
+            "squad_id": 21,
+            "soldier_id": null,
+            "vehicle_id": null,
+            "follow_squad_id": null,
+            "route": [],
+            "kind": "move",
+            "status": "queued",
+            "x2": null,
+            "z2": null,
+            "x": 5000.0,
+            "z": 6000.0,
+            "target": null,
+            "note": "",
+            "effect_until": null
+        },
+        {
+            "id": 3,
+            "squad_id": 21,
+            "soldier_id": null,
+            "vehicle_id": 2,
+            "follow_squad_id": null,
+            "route": [],
+            "kind": "mount",
+            "status": "pending",
+            "x2": null,
+            "z2": null,
+            "x": 1991.0,
+            "z": 7401.0,
+            "target": null,
+            "note": "",
+            "effect_until": null
+        },
+        {
+            "id": 2,
+            "squad_id": 1,
+            "soldier_id": null,
+            "vehicle_id": null,
+            "follow_squad_id": null,
+            "route": [],
+            "kind": "patrol",
+            "status": "queued",
+            "x2": 5400.0,
+            "z2": 6200.0,
+            "x": 5300.0,
+            "z": 6200.0,
+            "target": null,
+            "note": "",
+            "effect_until": null
+        },
+        {
+            "id": 1,
+            "squad_id": 1,
+            "soldier_id": null,
+            "vehicle_id": null,
+            "follow_squad_id": null,
+            "route": [
+                {
+                    "x": 5250.0,
+                    "z": 6150.0
+                }
+            ],
+            "kind": "move",
+            "status": "pending",
+            "x2": null,
+            "z2": null,
+            "x": 5200.0,
+            "z": 6100.0,
+            "target": null,
+            "note": "",
+            "effect_until": null
+        }
+    ],
+    "places": [
+        {
+            "id": "villa",
+            "name": "Villa",
+            "side": "us",
+            "kind": "home",
+            "x": 1951,
+            "z": 7401
+        },
+        {
+            "id": "airport",
+            "name": "Airport",
+            "side": "us",
+            "kind": "base",
+            "x": 2646,
+            "z": 5367
+        },
+        {
+            "id": "west-hq",
+            "name": "West HQ",
+            "side": "us",
+            "kind": "base",
+            "x": 3662,
+            "z": 7931
+        },
+        {
+            "id": "kamensk",
+            "name": "Kamensk",
+            "side": "ussr",
+            "kind": "home",
+            "x": 11867,
+            "z": 10680
+        },
+        {
+            "id": "military-hq",
+            "name": "Military HQ",
+            "side": "ussr",
+            "kind": "base",
+            "x": 7618,
+            "z": 4917
+        },
+        {
+            "id": "east-coast",
+            "name": "East Coast HQ",
+            "side": "ussr",
+            "kind": "base",
+            "x": 10542,
+            "z": 9708
+        },
+        {
+            "id": "ugoldar",
+            "name": "Ugoldar",
+            "side": "fia",
+            "kind": "home",
+            "x": 6642,
+            "z": 3907
+        },
+        {
+            "id": "hamertin",
+            "name": "Hamertin",
+            "side": "fia",
+            "kind": "town",
+            "x": 3318,
+            "z": 6842
+        },
+        {
+            "id": "michurino",
+            "name": "Michurino",
+            "side": "fia",
+            "kind": "town",
+            "x": 3800,
+            "z": 3719
+        },
+        {
+            "id": "mineraly",
+            "name": "Mineraly",
+            "side": null,
+            "kind": "objective",
+            "x": 6322,
+            "z": 8012
+        },
+        {
+            "id": "gorshkovo",
+            "name": "Gorshkovo",
+            "side": null,
+            "kind": "objective",
+            "x": 8422,
+            "z": 6592
+        },
+        {
+            "id": "krasnyy-oktyabr",
+            "name": "Krasnyy Oktyabr",
+            "side": null,
+            "kind": "objective",
+            "x": 3674,
+            "z": 5223
+        },
+        {
+            "id": "northern-crossroad",
+            "name": "Northern Crossroad",
+            "side": null,
+            "kind": "objective",
+            "x": 8559,
+            "z": 9376
+        },
+        {
+            "id": "hq-ne",
+            "name": "North-east HQ",
+            "side": null,
+            "kind": "base",
+            "x": 7925,
+            "z": 9595
+        },
+        {
+            "id": "hq-sw",
+            "name": "South-west HQ",
+            "side": null,
+            "kind": "base",
+            "x": 4365,
+            "z": 3220
+        },
+        {
+            "id": "bars-relay",
+            "name": "BARS relay tower",
+            "side": null,
+            "kind": "relay",
+            "x": 6860,
+            "z": 6781
+        },
+        {
+            "id": "peak-relay",
+            "name": "Peak relay tower",
+            "side": null,
+            "kind": "relay",
+            "x": 5056,
+            "z": 6328
+        },
+        {
+            "id": "sosnovy-mys",
+            "name": "Sosnovy Mys",
+            "side": null,
+            "kind": "harbour",
+            "x": 4356,
+            "z": 8144
+        },
+        {
+            "id": "mussel-cove",
+            "name": "Mussel Cove",
+            "side": null,
+            "kind": "harbour",
+            "x": 6046,
+            "z": 8444
+        },
+        {
+            "id": "west-cape-dock",
+            "name": "West Cape dock",
+            "side": null,
+            "kind": "harbour",
+            "x": 1642,
+            "z": 7386
+        },
+        {
+            "id": "michurino-pier",
+            "name": "Michurino pier",
+            "side": null,
+            "kind": "harbour",
+            "x": 3743,
+            "z": 3726
+        },
+        {
+            "id": "ugoldar-harbour",
+            "name": "Ugoldar harbour",
+            "side": null,
+            "kind": "harbour",
+            "x": 6817,
+            "z": 3492
+        },
+        {
+            "id": "coal-harbour",
+            "name": "Coal harbour",
+            "side": null,
+            "kind": "harbour",
+            "x": 7554,
+            "z": 4186
+        },
+        {
+            "id": "military-harbour",
+            "name": "Military harbour",
+            "side": null,
+            "kind": "harbour",
+            "x": 8802,
+            "z": 7395
+        },
+        {
+            "id": "komsomolsk-pier",
+            "name": "Komsomolsk pier",
+            "side": null,
+            "kind": "harbour",
+            "x": 8583,
+            "z": 10186
+        },
+        {
+            "id": "twin-pier",
+            "name": "Twin pier",
+            "side": null,
+            "kind": "harbour",
+            "x": 10054,
+            "z": 10860
+        },
+        {
+            "id": "kamensk-harbour",
+            "name": "Kamensk harbour",
+            "side": null,
+            "kind": "harbour",
+            "x": 11838,
+            "z": 10975
+        },
+        {
+            "id": "rocky-bay",
+            "name": "Rocky Bay harbour",
+            "side": null,
+            "kind": "harbour",
+            "x": 12122,
+            "z": 10520
+        }
+    ],
+    "markers": [
+        {
+            "id": 1,
+            "squad_id": 1,
+            "name": "Cole",
+            "role_name": "Rifleman",
+            "role": "rifle",
+            "side": "us",
+            "x": 5001,
+            "z": 6001,
+            "mine": true,
+            "hq": false,
+            "health": 70,
+            "bleeding": true,
+            "down": false,
+            "threat": "threatened",
+            "in_vehicle": false,
+            "seat": null,
+            "stance": "crouch",
+            "action": "Attack",
+            "heading": 90,
+            "target": null,
+            "reported": true
+        },
+        {
+            "id": 2,
+            "squad_id": 1,
+            "name": "Briggs",
+            "role_name": "Rifleman",
+            "role": "rifle",
+            "side": "us",
+            "x": 1937,
+            "z": 7429,
+            "mine": true,
+            "hq": false,
+            "health": 100,
+            "bleeding": false,
+            "down": false,
+            "threat": "safe",
+            "in_vehicle": false,
+            "seat": null,
+            "stance": null,
+            "action": null,
+            "heading": null,
+            "target": null,
+            "reported": false
+        },
+        {
+            "id": 4,
+            "squad_id": 1,
+            "name": "Dunn",
+            "role_name": "Rifleman",
+            "role": "rifle",
+            "side": "us",
+            "x": 1965,
+            "z": 7429,
+            "mine": true,
+            "hq": false,
+            "health": 100,
+            "bleeding": false,
+            "down": false,
+            "threat": "safe",
+            "in_vehicle": false,
+            "seat": null,
+            "stance": null,
+            "action": null,
+            "heading": null,
+            "target": null,
+            "reported": false
+        },
+        {
+            "id": 9,
+            "squad_id": 21,
+            "name": "Hale",
+            "role_name": "Rifleman",
+            "role": "rifle",
+            "side": "us",
+            "x": 1909,
+            "z": 7429,
+            "mine": true,
+            "hq": true,
+            "health": 100,
+            "bleeding": false,
+            "down": false,
+            "threat": "safe",
+            "in_vehicle": false,
+            "seat": null,
+            "stance": null,
+            "action": null,
+            "heading": null,
+            "target": null,
+            "reported": false
+        },
+        {
+            "id": 10,
+            "squad_id": 22,
+            "name": "Keller",
+            "role_name": "Squad leader",
+            "role": "leader",
+            "side": "us",
+            "x": 1909,
+            "z": 7429,
+            "mine": true,
+            "hq": true,
+            "health": 100,
+            "bleeding": false,
+            "down": false,
+            "threat": "safe",
+            "in_vehicle": false,
+            "seat": null,
+            "stance": null,
+            "action": null,
+            "heading": null,
+            "target": null,
+            "reported": false
+        },
+        {
+            "id": 11,
+            "squad_id": 22,
+            "name": "Shaw",
+            "role_name": "Automatic rifleman",
+            "role": "mg",
+            "side": "us",
+            "x": 1937,
+            "z": 7429,
+            "mine": true,
+            "hq": true,
+            "health": 100,
+            "bleeding": false,
+            "down": false,
+            "threat": "safe",
+            "in_vehicle": false,
+            "seat": null,
+            "stance": null,
+            "action": null,
+            "heading": null,
+            "target": null,
+            "reported": false
+        },
+        {
+            "id": 12,
+            "squad_id": 22,
+            "name": "Brooks",
+            "role_name": "Rifleman",
+            "role": "rifle",
+            "side": "us",
+            "x": 1965,
+            "z": 7429,
+            "mine": true,
+            "hq": true,
+            "health": 100,
+            "bleeding": false,
+            "down": false,
+            "threat": "safe",
+            "in_vehicle": false,
+            "seat": null,
+            "stance": null,
+            "action": null,
+            "heading": null,
+            "target": null,
+            "reported": false
+        },
+        {
+            "id": 13,
+            "squad_id": 22,
+            "name": "Adler",
+            "role_name": "Medic",
+            "role": "medic",
+            "side": "us",
+            "x": 1993,
+            "z": 7429,
+            "mine": true,
+            "hq": true,
+            "health": 100,
+            "bleeding": false,
+            "down": false,
+            "threat": "safe",
+            "in_vehicle": false,
+            "seat": null,
+            "stance": null,
+            "action": null,
+            "heading": null,
+            "target": null,
+            "reported": false
+        }
+    ],
+    "contacts": [
+        {
+            "id": 1,
+            "side": "ussr",
+            "x": 5290,
+            "z": 6000,
+            "kind": "inf",
+            "how": "seen",
+            "heading": 270,
+            "seen_at": "2026-10-11T11:59:57+00:00",
+            "age_s": 3,
+            "trail": [],
+            "role": "rifle",
+            "vehicle": null
+        }
+    ],
+    "intel": {
+        "blind_until": null,
+        "operations": []
+    },
+    "world": {
+        "hour": 12.0,
+        "weather": "Clear",
+        "rain": 0,
+        "fog": 0,
+        "wind": 3.0,
+        "wind_dir": 90,
+        "sunrise": 6.0,
+        "sunset": 20.0,
+        "moon": 50,
+        "at": "2026-10-11T12:00:00+00:00"
+    },
+    "feed": {
+        "source": "game",
+        "at": "2026-10-11T12:00:00+00:00"
+    },
+    "vehicles": [
+        {
+            "id": 1,
+            "kind": "truck",
+            "name": "Troop truck",
+            "model": "M923A1",
+            "status": "fielded",
+            "x": 5010.0,
+            "z": 6010.0,
+            "health": 90,
+            "fuel": 80,
+            "seats": 14,
+            "crew": 0,
+            "hq": false
+        },
+        {
+            "id": 2,
+            "kind": "truck",
+            "name": "Troop truck",
+            "model": "M923A1",
+            "status": "ordered",
+            "x": 1991.0,
+            "z": 7401.0,
+            "health": 100,
+            "fuel": 100,
+            "seats": null,
+            "crew": 0,
+            "hq": true
+        }
+    ],
+    "motor_pool": [
+        {
+            "id": "jeep",
+            "name": "Light utility",
+            "role": "Fast, two seats, no armour",
+            "cost": 40,
+            "model": "M151A2",
+            "prefab": "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
+        },
+        {
+            "id": "utility",
+            "name": "Utility car",
+            "role": "Carries a fire team",
+            "cost": 55,
+            "model": "M998 HMMWV",
+            "prefab": "{B55C6990A6A9411B}Prefabs/Vehicles/Wheeled/M998/M998_covered.et"
+        },
+        {
+            "id": "jeep_mg",
+            "name": "Gun jeep",
+            "role": "Mounted machine gun",
+            "cost": 80,
+            "model": "M151A2 M2HB",
+            "prefab": "{F6B23D17D5067C11}Prefabs/Vehicles/Wheeled/M151A2/M151A2_M2HB.et"
+        },
+        {
+            "id": "truck",
+            "name": "Troop truck",
+            "role": "Carries a full squad and its ammunition",
+            "cost": 80,
+            "model": "M923A1",
+            "prefab": "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et"
+        },
+        {
+            "id": "ambulance",
+            "name": "Ambulance",
+            "role": "Room for the wounded on the drive home",
+            "cost": 70,
+            "model": "M997",
+            "prefab": "{00C9BBE426F7D459}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance.et"
+        },
+        {
+            "id": "armed_car",
+            "name": "Armoured car",
+            "role": "Armour and a heavy gun",
+            "cost": 130,
+            "model": "M1025 M2HB",
+            "prefab": "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB.et"
+        },
+        {
+            "id": "apc",
+            "name": "Armoured carrier",
+            "role": "Carries a squad and its ammunition under armour",
+            "cost": 220,
+            "model": "LAV-25",
+            "prefab": "{0FBF8F010F81A4E5}Prefabs/Vehicles/Wheeled/LAV25/LAV25.et"
+        }
+    ],
+    "vehicle_limit": 4,
+    "runs": [
+        {
+            "id": 1,
+            "kind": "supply",
+            "squad_id": 1,
+            "vehicle_id": 2,
+            "stage": "out",
+            "status": "active",
+            "note": "On its way."
+        }
+    ],
+    "run_costs": {
+        "supply": 20,
+        "ambulance": 25,
+        "transport": 15
+    },
+    "logistics": {
+        "home_radius": 200,
+        "truck_radius": 40,
+        "truck_cost": 10,
+        "service_cost": 15,
+        "magazines": 6,
+        "ammo_vehicles": ["truck", "apc"]
+    },
+    "support": [
+        {
+            "id": 1,
+            "kind": "fire_he_small",
+            "name": "Mortar barrage",
+            "status": "requested",
+            "squad_id": null,
+            "vehicle_id": null,
+            "x": 9000.0,
+            "z": 9000.0,
+            "cost": 45,
+            "ready_at": "2026-10-11T12:01:30+00:00",
+            "note": ""
+        }
+    ],
+    "support_catalog": [
+        {
+            "id": "smoke",
+            "name": "Smoke screen",
+            "detail": "Mortar smoke on the mark. Covers a withdrawal or a pickup",
+            "cost": 15,
+            "delay": 60,
+            "cooldown": 600,
+            "danger_close": 0,
+            "magazines": 0,
+            "ready_at": null
+        },
+        {
+            "id": "illum",
+            "name": "Illumination",
+            "detail": "A flare over the mark",
+            "cost": 10,
+            "delay": 45,
+            "cooldown": 300,
+            "danger_close": 0,
+            "magazines": 0,
+            "ready_at": null
+        },
+        {
+            "id": "fire_he_small",
+            "name": "Mortar barrage",
+            "detail": "A short HE barrage on the mark",
+            "cost": 45,
+            "delay": 90,
+            "cooldown": 1800,
+            "danger_close": 150,
+            "magazines": 0,
+            "ready_at": "2026-10-11T12:30:00+00:00"
+        },
+        {
+            "id": "fire_he_medium",
+            "name": "Heavy barrage",
+            "detail": "A long HE barrage over a wider area",
+            "cost": 80,
+            "delay": 120,
+            "cooldown": 3600,
+            "danger_close": 250,
+            "magazines": 0,
+            "ready_at": null
+        }
+    ],
+    "tasks": [
+        {
+            "ends_at": "2026-10-11T12:30:00+00:00",
+            "men": 4,
+            "doing": null,
+            "at": {
+                "x": 1951.0,
+                "z": 7401.0
+            },
+            "id": 1,
+            "kind": "hold",
+            "size": 4,
+            "label": "",
+            "a": {
+                "x": 4000.0,
+                "z": 4000.0
+            },
+            "b": null,
+            "squad_id": 22,
+            "note": "Squad raised at home. Moving out."
+        }
+    ],
+    "hq": {
+        "budget": 8,
+        "in_use": 5,
+        "sizes": [4, 6, 8],
+        "durations": [30, 60, 120]
+    },
+    "operations": [
+        {
+            "id": "recon",
+            "label": "Scout",
+            "radius": 20,
+            "hold": 600,
+            "targets": ["base", "objective", "town", "relay", "harbour"],
+            "snap": 150,
+            "required": false,
+            "needs": null,
+            "help": "The game's Scout: the squad goes to the mark holding fire and watches the area for 10 min. Your side keeps what it sees on the map for 30 min instead of 15; a scouted enemy-held point stops paying its holder for 2 h."
+        },
+        {
+            "id": "sabotage",
+            "label": "Sabotage",
+            "radius": 15,
+            "hold": 0,
+            "targets": ["relay"],
+            "snap": 400,
+            "required": true,
+            "needs": "sapper",
+            "help": "Needs a sapper. The squad goes to a relay tower; the sapper plants a real demolition charge (20 s to plant) with a 45 s fuze and the squad falls back. Anyone can disarm it in time. If it goes off, the other sides get no contact reports for 60 min and the relay's holder loses its income for 2 h."
+        },
+        {
+            "id": "raid",
+            "label": "Raid",
+            "radius": 75,
+            "hold": 120,
+            "targets": ["harbour"],
+            "snap": 400,
+            "required": true,
+            "needs": null,
+            "help": "Walks in holding fire; must stay within 75 m of a harbour unseen for 2 min (being spotted restarts the clock). +90 supplies for you; every enemy commander loses 15. Your side can raid a harbour once every 6 h."
+        }
+    ],
+    "objectives": [
+        {
+            "id": 3,
+            "kind": "raid",
+            "title": "Raid Komsomolsk pier · plunder, enemy commanders lose supplies",
+            "target": "komsomolsk-pier",
+            "x": 8583.0,
+            "z": 10186.0,
+            "reward": 60,
+            "status": "open",
+            "progress_at": null,
+            "progress_squad_id": null,
+            "stage": null,
+            "expires_at": "2026-10-11T18:00:00+00:00",
+            "mine": false
+        },
+        {
+            "id": 2,
+            "kind": "supply_run",
+            "title": "Bring cargo from Kamensk harbour home by vehicle",
+            "target": "kamensk-harbour",
+            "x": 11838.0,
+            "z": 10975.0,
+            "reward": 90,
+            "status": "open",
+            "progress_at": null,
+            "progress_squad_id": null,
+            "stage": null,
+            "expires_at": "2026-10-11T18:00:00+00:00",
+            "mine": false
+        },
+        {
+            "id": 1,
+            "kind": "capture",
+            "title": "Take Rocky Bay harbour · +10/h for every US commander",
+            "target": "rocky-bay",
+            "x": 12122.0,
+            "z": 10520.0,
+            "reward": 90,
+            "status": "open",
+            "progress_at": null,
+            "progress_squad_id": null,
+            "stage": null,
+            "expires_at": "2026-10-11T18:00:00+00:00",
+            "mine": false
+        }
+    ],
+    "territory": [
+        {
+            "place": "airport",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "west-hq",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "military-hq",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "east-coast",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "hamertin",
+            "income": 8,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "michurino",
+            "income": 8,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "mineraly",
+            "income": 12,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "gorshkovo",
+            "income": 12,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "krasnyy-oktyabr",
+            "income": 12,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "northern-crossroad",
+            "income": 12,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "hq-ne",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "hq-sw",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "bars-relay",
+            "income": 5,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "peak-relay",
+            "income": 5,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "sosnovy-mys",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "mussel-cove",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "west-cape-dock",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "michurino-pier",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "ugoldar-harbour",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "coal-harbour",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "military-harbour",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "komsomolsk-pier",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "twin-pier",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "kamensk-harbour",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        },
+        {
+            "place": "rocky-bay",
+            "income": 10,
+            "side": null,
+            "claim_side": null,
+            "claim_since": null,
+            "interdicted_until": null
+        }
+    ],
+    "income": {
+        "base": 60,
+        "territory": 0
+    },
+    "events": [
+        {
+            "id": "task-1",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "hq",
+            "text": "cruickshank.toney · HQ to secure 040 040 with 4 men"
+        },
+        {
+            "id": "supply-5",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "supply",
+            "text": "cruickshank.toney · called HQ support, 20 supplies"
+        },
+        {
+            "id": "supply-4",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "supply",
+            "text": "cruickshank.toney · called HQ support, 45 supplies"
+        },
+        {
+            "id": "supply-3",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "supply",
+            "text": "cruickshank.toney · drew a vehicle, 80 supplies"
+        },
+        {
+            "id": "supply-1",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "supply",
+            "text": "cruickshank.toney · enlisted with 250 supplies"
+        },
+        {
+            "id": "squad-20",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "USSR put a squad on the island"
+        },
+        {
+            "id": "squad-19",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "USSR put a squad on the island"
+        },
+        {
+            "id": "squad-18",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "USSR put a squad on the island"
+        },
+        {
+            "id": "squad-17",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "USSR put a squad on the island"
+        },
+        {
+            "id": "squad-16",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "USSR put a squad on the island"
+        },
+        {
+            "id": "squad-15",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "USSR put a squad on the island"
+        },
+        {
+            "id": "squad-14",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "USSR put a squad on the island"
+        },
+        {
+            "id": "squad-13",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "USSR put a squad on the island"
+        },
+        {
+            "id": "squad-12",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "USSR put a squad on the island"
+        },
+        {
+            "id": "squad-11",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "USSR put a squad on the island"
+        },
+        {
+            "id": "move-5",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "move",
+            "text": "cruickshank.toney · HQ Bravo: defend at 040 040 · pending"
+        },
+        {
+            "id": "move-4",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "move",
+            "text": "cruickshank.toney · HQ Alpha: move at 050 060 · waiting in the chain"
+        },
+        {
+            "id": "move-3",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "move",
+            "text": "cruickshank.toney · HQ Alpha: board vehicle at 019 074 · pending"
+        },
+        {
+            "id": "move-2",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "move",
+            "text": "cruickshank.toney · Alpha: patrol at 053 062 · waiting in the chain"
+        },
+        {
+            "id": "move-1",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "move",
+            "text": "cruickshank.toney · Alpha: move at 052 061 · pending"
+        },
+        {
+            "id": "loss-3",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "loss",
+            "text": "cruickshank.toney · Hale was killed"
+        },
+        {
+            "id": "join-9",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "cruickshank.toney · Hale joined US as Rifleman"
+        },
+        {
+            "id": "join-4",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "cruickshank.toney · Dunn joined US as Rifleman"
+        },
+        {
+            "id": "join-3",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "cruickshank.toney · Hale joined US as Rifleman"
+        },
+        {
+            "id": "join-2",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "cruickshank.toney · Briggs joined US as Rifleman"
+        },
+        {
+            "id": "join-13",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "cruickshank.toney · Adler joined US as Medic"
+        },
+        {
+            "id": "join-12",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "cruickshank.toney · Brooks joined US as Rifleman"
+        },
+        {
+            "id": "join-11",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "cruickshank.toney · Shaw joined US as Automatic rifleman"
+        },
+        {
+            "id": "join-10",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "cruickshank.toney · Keller joined US as Squad leader"
+        },
+        {
+            "id": "join-1",
+            "at": "2026-10-11T12:00:00+00:00",
+            "kind": "join",
+            "text": "cruickshank.toney · Cole joined US as Rifleman"
+        }
+    ],
+    "soldiers": [
+        {
+            "id": 1,
+            "squad_id": 1,
+            "name": "Cole",
+            "note": "",
+            "role": "rifleman",
+            "role_name": "Rifleman",
+            "aim": 40,
+            "grit": 40,
+            "fieldcraft": 40,
+            "endurance": 40,
+            "endurance_effective": 40,
+            "aim_effective": 40,
+            "drill": {
+                "aim": 20,
+                "grit": 20,
+                "fieldcraft": 20,
+                "endurance": 20
+            },
+            "grit_effective": 40,
+            "fieldcraft_effective": 40,
+            "service": 0,
+            "spent": 0,
+            "loss": null,
+            "cost": 30,
+            "health": 70,
+            "stamina": 80,
+            "bleeding": true,
+            "down": false,
+            "threat": "threatened",
+            "mags": 3,
+            "in_vehicle": false,
+            "seat": null,
+            "stance": "crouch",
+            "action": "Attack",
+            "morale": 48,
+            "mood": "fair",
+            "battles": 0,
+            "kills": 0,
+            "ai_skill": "regular",
+            "flags": ["bleeding", "under_fire"],
+            "location": "field",
+            "stance_order": "auto",
+            "pace_order": "auto",
+            "ready_at": null,
+            "death": null
+        },
+        {
+            "id": 2,
+            "squad_id": 1,
+            "name": "Briggs",
+            "note": "",
+            "role": "rifleman",
+            "role_name": "Rifleman",
+            "aim": 40,
+            "grit": 40,
+            "fieldcraft": 40,
+            "endurance": 40,
+            "endurance_effective": 40,
+            "aim_effective": 40,
+            "drill": {
+                "aim": 20,
+                "grit": 20,
+                "fieldcraft": 20,
+                "endurance": 20
+            },
+            "grit_effective": 40,
+            "fieldcraft_effective": 40,
+            "service": 0,
+            "spent": 0,
+            "loss": null,
+            "cost": 30,
+            "health": 100,
+            "stamina": 80,
+            "bleeding": false,
+            "down": false,
+            "threat": "safe",
+            "mags": 5,
+            "in_vehicle": false,
+            "seat": null,
+            "stance": null,
+            "action": null,
+            "morale": 48,
+            "mood": "fair",
+            "battles": 0,
+            "kills": 0,
+            "ai_skill": "regular",
+            "flags": [],
+            "location": "field",
+            "stance_order": "auto",
+            "pace_order": "auto",
+            "ready_at": null,
+            "death": null
+        },
+        {
+            "id": 4,
+            "squad_id": 1,
+            "name": "Dunn",
+            "note": "",
+            "role": "rifleman",
+            "role_name": "Rifleman",
+            "aim": 40,
+            "grit": 40,
+            "fieldcraft": 40,
+            "endurance": 40,
+            "endurance_effective": 40,
+            "aim_effective": 40,
+            "drill": {
+                "aim": 20,
+                "grit": 20,
+                "fieldcraft": 20,
+                "endurance": 20
+            },
+            "grit_effective": 40,
+            "fieldcraft_effective": 40,
+            "service": 0,
+            "spent": 0,
+            "loss": null,
+            "cost": 30,
+            "health": 100,
+            "stamina": 100,
+            "bleeding": false,
+            "down": false,
+            "threat": "safe",
+            "mags": null,
+            "in_vehicle": false,
+            "seat": null,
+            "stance": null,
+            "action": null,
+            "morale": 48,
+            "mood": "fair",
+            "battles": 0,
+            "kills": 0,
+            "ai_skill": "regular",
+            "flags": [],
+            "location": "field",
+            "stance_order": "auto",
+            "pace_order": "auto",
+            "ready_at": null,
+            "death": null
+        }
+    ],
+    "fallen": [
+        {
+            "id": 3,
+            "squad_id": 1,
+            "name": "Hale",
+            "note": "",
+            "role": "rifleman",
+            "role_name": "Rifleman",
+            "aim": 40,
+            "grit": 40,
+            "fieldcraft": 40,
+            "endurance": 40,
+            "endurance_effective": 40,
+            "aim_effective": 40,
+            "drill": {
+                "aim": 20,
+                "grit": 20,
+                "fieldcraft": 20,
+                "endurance": 20
+            },
+            "grit_effective": 40,
+            "fieldcraft_effective": 40,
+            "service": 0,
+            "spent": 0,
+            "loss": "killed",
+            "cost": 30,
+            "health": 0,
+            "stamina": 100,
+            "bleeding": false,
+            "down": false,
+            "threat": "safe",
+            "mags": null,
+            "in_vehicle": false,
+            "seat": null,
+            "stance": null,
+            "action": null,
+            "morale": 60,
+            "mood": "fair",
+            "battles": 0,
+            "kills": 0,
+            "ai_skill": "regular",
+            "flags": ["wounded"],
+            "location": "field",
+            "stance_order": "auto",
+            "pace_order": "auto",
+            "ready_at": null,
+            "death": {
+                "cause": "enemy",
+                "by": "Orlov",
+                "weapon": "Rifle_AK74",
+                "metres": 180
+            }
+        }
+    ],
+    "catalog": {
+        "stat_min": 10,
+        "stat_max": 100,
+        "point_cost": 1,
+        "stats": [
+            {
+                "id": "aim",
+                "name": "Marksmanship"
+            },
+            {
+                "id": "grit",
+                "name": "Grit"
+            },
+            {
+                "id": "fieldcraft",
+                "name": "Fieldcraft"
+            }
+        ],
+        "roles": [
+            {
+                "id": "rifleman",
+                "name": "Rifleman",
+                "task": "Line",
+                "cost": 30,
+                "min_cost": 15,
+                "aim": 40,
+                "grit": 40,
+                "fieldcraft": 40,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M16A2",
+                    "ussr": "AK-74",
+                    "fia": "Sa-58P"
+                }
+            },
+            {
+                "id": "team_leader",
+                "name": "Team leader",
+                "task": "Command",
+                "cost": 40,
+                "min_cost": 20,
+                "aim": 50,
+                "grit": 45,
+                "fieldcraft": 45,
+                "sides": ["us"],
+                "weapons": {
+                    "us": "M16A2, 4x scope",
+                    "ussr": null,
+                    "fia": null
+                }
+            },
+            {
+                "id": "squad_leader",
+                "name": "Squad leader",
+                "task": "Command",
+                "cost": 50,
+                "min_cost": 25,
+                "aim": 45,
+                "grit": 55,
+                "fieldcraft": 50,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M16A2, tracers",
+                    "ussr": "AK-74, GP-25",
+                    "fia": "Sa-58V"
+                }
+            },
+            {
+                "id": "senior",
+                "name": "Senior rifleman",
+                "task": "Line",
+                "cost": 40,
+                "min_cost": 20,
+                "aim": 55,
+                "grit": 40,
+                "fieldcraft": 45,
+                "sides": ["ussr"],
+                "weapons": {
+                    "us": null,
+                    "ussr": "AK-74N, 1P29",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sergeant",
+                "name": "Platoon sergeant",
+                "task": "Command",
+                "cost": 50,
+                "min_cost": 20,
+                "aim": 45,
+                "grit": 55,
+                "fieldcraft": 40,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16A2",
+                    "ussr": "AK-74",
+                    "fia": null
+                }
+            },
+            {
+                "id": "platoon",
+                "name": "Platoon leader",
+                "task": "Command",
+                "cost": 60,
+                "min_cost": 30,
+                "aim": 40,
+                "grit": 60,
+                "fieldcraft": 50,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M16A2",
+                    "ussr": "AK-74",
+                    "fia": "Sa-58V"
+                }
+            },
+            {
+                "id": "officer",
+                "name": "Officer",
+                "task": "Command",
+                "cost": 45,
+                "min_cost": 20,
+                "aim": 35,
+                "grit": 50,
+                "fieldcraft": 40,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M9",
+                    "ussr": "PM",
+                    "fia": null
+                }
+            },
+            {
+                "id": "autorifle",
+                "name": "Automatic rifleman",
+                "task": "Fire support",
+                "cost": 50,
+                "min_cost": 25,
+                "aim": 35,
+                "grit": 55,
+                "fieldcraft": 30,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M249",
+                    "ussr": "RPK-74",
+                    "fia": null
+                }
+            },
+            {
+                "id": "machinegun",
+                "name": "Machine gunner",
+                "task": "Fire support",
+                "cost": 65,
+                "min_cost": 30,
+                "aim": 40,
+                "grit": 60,
+                "fieldcraft": 25,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M60",
+                    "ussr": "PKM",
+                    "fia": "UK-59L"
+                }
+            },
+            {
+                "id": "assistant_mg",
+                "name": "Machine gunner assistant",
+                "task": "Fire support",
+                "cost": 40,
+                "min_cost": 20,
+                "aim": 35,
+                "grit": 45,
+                "fieldcraft": 35,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M16A2, M60 belts",
+                    "ussr": "AK-74, PK belts",
+                    "fia": "Sa-58P, UK-59 belts"
+                }
+            },
+            {
+                "id": "grenadier",
+                "name": "Grenadier",
+                "task": "Fire support",
+                "cost": 50,
+                "min_cost": 20,
+                "aim": 40,
+                "grit": 45,
+                "fieldcraft": 35,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16A2, M203",
+                    "ussr": "AK-74, GP-25",
+                    "fia": null
+                }
+            },
+            {
+                "id": "ammo",
+                "name": "Ammunition bearer",
+                "task": "Fire support",
+                "cost": 35,
+                "min_cost": 15,
+                "aim": 30,
+                "grit": 40,
+                "fieldcraft": 35,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M16A2, extra belts",
+                    "ussr": "AK-74, extra belts",
+                    "fia": "Sa-58P, extra belts"
+                }
+            },
+            {
+                "id": "antitank",
+                "name": "Anti-tank",
+                "task": "Anti-armor",
+                "cost": 70,
+                "min_cost": 35,
+                "aim": 45,
+                "grit": 50,
+                "fieldcraft": 30,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M72A3 LAW",
+                    "ussr": "RPG-7V1",
+                    "fia": "RPG-7V1"
+                }
+            },
+            {
+                "id": "assistant_at",
+                "name": "Anti-tank assistant",
+                "task": "Anti-armor",
+                "cost": 40,
+                "min_cost": 20,
+                "aim": 40,
+                "grit": 45,
+                "fieldcraft": 35,
+                "sides": ["ussr", "fia"],
+                "weapons": {
+                    "us": null,
+                    "ussr": "AK-74, RPG rockets",
+                    "fia": "Sa-58P, RPG rockets"
+                }
+            },
+            {
+                "id": "marksman",
+                "name": "Marksman",
+                "task": "Recon",
+                "cost": 55,
+                "min_cost": 30,
+                "aim": 70,
+                "grit": 35,
+                "fieldcraft": 50,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M21 SWS",
+                    "ussr": "SVD",
+                    "fia": "SVD"
+                }
+            },
+            {
+                "id": "spotter",
+                "name": "Spotter",
+                "task": "Recon",
+                "cost": 50,
+                "min_cost": 25,
+                "aim": 55,
+                "grit": 40,
+                "fieldcraft": 55,
+                "sides": ["us"],
+                "weapons": {
+                    "us": "M16 carbine, M203",
+                    "ussr": null,
+                    "fia": null
+                }
+            },
+            {
+                "id": "scout",
+                "name": "Scout",
+                "task": "Recon",
+                "cost": 40,
+                "min_cost": 20,
+                "aim": 45,
+                "grit": 35,
+                "fieldcraft": 60,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M16A2",
+                    "ussr": "AK-74",
+                    "fia": "Sa-58V"
+                }
+            },
+            {
+                "id": "scout_radio",
+                "name": "Scout radio operator",
+                "task": "Recon",
+                "cost": 50,
+                "min_cost": 20,
+                "aim": 40,
+                "grit": 40,
+                "fieldcraft": 55,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16A2, AN/PRC-77",
+                    "ussr": "AK-74, R-148",
+                    "fia": null
+                }
+            },
+            {
+                "id": "medic",
+                "name": "Medic",
+                "task": "Support",
+                "cost": 45,
+                "min_cost": 20,
+                "aim": 30,
+                "grit": 50,
+                "fieldcraft": 45,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M16A2",
+                    "ussr": "AK-74",
+                    "fia": "Sa-58V"
+                }
+            },
+            {
+                "id": "radioman",
+                "name": "Combat signaler",
+                "task": "Support",
+                "cost": 40,
+                "min_cost": 20,
+                "aim": 35,
+                "grit": 40,
+                "fieldcraft": 45,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M16A2, AN/PRC-77",
+                    "ussr": "AK-74, R-148",
+                    "fia": "Sa-58P"
+                }
+            },
+            {
+                "id": "sapper",
+                "name": "Sapper",
+                "task": "Support",
+                "cost": 50,
+                "min_cost": 25,
+                "aim": 35,
+                "grit": 45,
+                "fieldcraft": 50,
+                "sides": ["us", "ussr", "fia"],
+                "weapons": {
+                    "us": "M16A2, M112",
+                    "ussr": "AK-74, demo",
+                    "fia": "Sa-58P, demo"
+                }
+            },
+            {
+                "id": "sf",
+                "name": "Special forces",
+                "task": "Special forces",
+                "cost": 80,
+                "min_cost": 40,
+                "aim": 55,
+                "grit": 55,
+                "fieldcraft": 55,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, red dot",
+                    "ussr": "AK-74N",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_officer",
+                "name": "Special forces officer",
+                "task": "Special forces",
+                "cost": 75,
+                "min_cost": 40,
+                "aim": 45,
+                "grit": 60,
+                "fieldcraft": 50,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, M9",
+                    "ussr": "AKS-74UN",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_leader",
+                "name": "Special forces squad leader",
+                "task": "Special forces",
+                "cost": 90,
+                "min_cost": 45,
+                "aim": 50,
+                "grit": 65,
+                "fieldcraft": 55,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, M203",
+                    "ussr": "AK-74N, GP-25",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_grenadier",
+                "name": "Special forces grenadier",
+                "task": "Special forces",
+                "cost": 85,
+                "min_cost": 40,
+                "aim": 50,
+                "grit": 55,
+                "fieldcraft": 45,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, M203",
+                    "ussr": "AK-74N, GP-25",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_machinegun",
+                "name": "Special forces machine gunner",
+                "task": "Special forces",
+                "cost": 95,
+                "min_cost": 45,
+                "aim": 45,
+                "grit": 70,
+                "fieldcraft": 40,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M249",
+                    "ussr": "RPK-74N",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_medic",
+                "name": "Special forces medic",
+                "task": "Special forces",
+                "cost": 80,
+                "min_cost": 40,
+                "aim": 40,
+                "grit": 60,
+                "fieldcraft": 55,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine",
+                    "ussr": "AKS-74UN",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_radio",
+                "name": "Special forces radio operator",
+                "task": "Special forces",
+                "cost": 80,
+                "min_cost": 40,
+                "aim": 45,
+                "grit": 50,
+                "fieldcraft": 55,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, AN/PRC-77",
+                    "ussr": "AKS-74UN",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_marksman",
+                "name": "Special forces sharpshooter",
+                "task": "Special forces",
+                "cost": 100,
+                "min_cost": 50,
+                "aim": 80,
+                "grit": 45,
+                "fieldcraft": 60,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16A2, 4x scope",
+                    "ussr": "SVD",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_sapper",
+                "name": "Special forces sapper",
+                "task": "Special forces",
+                "cost": 90,
+                "min_cost": 45,
+                "aim": 45,
+                "grit": 55,
+                "fieldcraft": 60,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, LAW",
+                    "ussr": "AKS-74UN",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_recon",
+                "name": "Special forces recon",
+                "task": "Suppressed",
+                "cost": 105,
+                "min_cost": 50,
+                "aim": 60,
+                "grit": 55,
+                "fieldcraft": 70,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, suppressor",
+                    "ussr": "AK-74N, PBS-4",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_recon_leader",
+                "name": "Special forces recon leader",
+                "task": "Suppressed",
+                "cost": 110,
+                "min_cost": 50,
+                "aim": 55,
+                "grit": 65,
+                "fieldcraft": 70,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, suppressor",
+                    "ussr": "AK-74N, PBS-4",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_recon_grenadier",
+                "name": "Special forces recon grenadier",
+                "task": "Suppressed",
+                "cost": 105,
+                "min_cost": 50,
+                "aim": 55,
+                "grit": 55,
+                "fieldcraft": 65,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16A2, M203, suppressor",
+                    "ussr": "AK-74N, GP-25, PBS-4",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_recon_medic",
+                "name": "Special forces recon medic",
+                "task": "Suppressed",
+                "cost": 100,
+                "min_cost": 50,
+                "aim": 45,
+                "grit": 60,
+                "fieldcraft": 70,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, suppressor",
+                    "ussr": "AKS-74UN, PBS-4",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_recon_radio",
+                "name": "Special forces recon radio operator",
+                "task": "Suppressed",
+                "cost": 100,
+                "min_cost": 50,
+                "aim": 50,
+                "grit": 50,
+                "fieldcraft": 70,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, suppressor",
+                    "ussr": "AKS-74UN, PBS-4",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_recon_marksman",
+                "name": "Special forces recon sharpshooter",
+                "task": "Suppressed",
+                "cost": 110,
+                "min_cost": 55,
+                "aim": 85,
+                "grit": 45,
+                "fieldcraft": 75,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16A2, scope, suppressor",
+                    "ussr": "AK-74N, 1P29, PBS-4",
+                    "fia": null
+                }
+            },
+            {
+                "id": "sf_recon_sapper",
+                "name": "Special forces recon sapper",
+                "task": "Suppressed",
+                "cost": 110,
+                "min_cost": 50,
+                "aim": 50,
+                "grit": 55,
+                "fieldcraft": 70,
+                "sides": ["us", "ussr"],
+                "weapons": {
+                    "us": "M16 carbine, LAW, suppressor",
+                    "ussr": "AKS-74UN, PBS-4",
+                    "fia": null
+                }
+            },
+            {
+                "id": "plain",
+                "name": "Guerrilla",
+                "task": "Plain clothes",
+                "cost": 25,
+                "min_cost": 10,
+                "aim": 25,
+                "grit": 35,
+                "fieldcraft": 55,
+                "sides": ["fia"],
+                "weapons": {
+                    "us": null,
+                    "ussr": null,
+                    "fia": "PM"
+                }
+            },
+            {
+                "id": "plain_grenadier",
+                "name": "Guerrilla grenadier",
+                "task": "Plain clothes",
+                "cost": 30,
+                "min_cost": 15,
+                "aim": 30,
+                "grit": 35,
+                "fieldcraft": 50,
+                "sides": ["fia"],
+                "weapons": {
+                    "us": null,
+                    "ussr": null,
+                    "fia": "PM"
+                }
+            },
+            {
+                "id": "plain_medic",
+                "name": "Guerrilla medic",
+                "task": "Plain clothes",
+                "cost": 35,
+                "min_cost": 15,
+                "aim": 25,
+                "grit": 50,
+                "fieldcraft": 55,
+                "sides": ["fia"],
+                "weapons": {
+                    "us": null,
+                    "ussr": null,
+                    "fia": "PM"
+                }
+            },
+            {
+                "id": "plain_spotter",
+                "name": "Guerrilla spotter",
+                "task": "Plain clothes",
+                "cost": 30,
+                "min_cost": 15,
+                "aim": 35,
+                "grit": 30,
+                "fieldcraft": 60,
+                "sides": ["fia"],
+                "weapons": {
+                    "us": null,
+                    "ussr": null,
+                    "fia": "PM"
+                }
+            }
+        ]
+    },
+    "economy": {
+        "supplies": 1855,
+        "income_per_hour": 60,
+        "supply_cap": 1500,
+        "service_cap": 24,
+        "missing": 0,
+        "tier": 0,
+        "tier_name": "Green",
+        "recruit": {
+            "cost": 30,
+            "available": true,
+            "label": "Recruit to 4 · 30"
+        },
+        "train": {
+            "cost": 60,
+            "available": true,
+            "label": "Train to Regular · 60"
+        }
+    }
+}

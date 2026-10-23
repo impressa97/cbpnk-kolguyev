@@ -1,0 +1,16 @@
+[Unit]
+Description=CBPNK Kolguyev war bridge (site orders.tsv <-> Reforger mod state.tsv)
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=-/opt/reforger-server/.env
+EnvironmentFile=-/opt/cbpnk-kolguyev/hq/.env
+ExecStart=/opt/reforger-server/bin/war-bridge.sh --loop
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,70 @@
+# Arma Reforger dedicated — Conflict PvE Remixed, Kolguyev. US vs USSR AI.
+# Steam app 1874900 via ghcr.io/acemod/arma-reforger (anonymous login).
+# First start downloads the server (~10 GB). Profile and saves stay in ./profile.
+#
+#   cd /opt/reforger-server && docker compose up -d
+#
+# Ops: docs/REFORGER.md
+services:
+  reforger:
+    image: ghcr.io/acemod/arma-reforger:latest
+    container_name: reforger-server
+    hostname: reforger-server
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      SERVER_BIND_ADDRESS: "0.0.0.0"
+      SERVER_BIND_PORT: ${GAME_PORT:-2001}
+      SERVER_PUBLIC_ADDRESS: ${SERVER_PUBLIC_ADDRESS:?set SERVER_PUBLIC_ADDRESS in .env}
+      SERVER_PUBLIC_PORT: ${GAME_PORT:-2001}
+      SERVER_A2S_ADDRESS: "0.0.0.0"
+      SERVER_A2S_PORT: ${A2S_PORT:-17777}
+      RCON_ADDRESS: "0.0.0.0"
+      RCON_PORT: ${RCON_PORT:-19999}
+      RCON_PASSWORD: ${RCON_PASSWORD:?set RCON_PASSWORD in /opt/reforger-server/.env}
+      RCON_PERMISSION: admin
+      GAME_NAME: ${GAME_NAME:-qpstall}
+      GAME_PASSWORD: ${GAME_PASSWORD:-}
+      GAME_PASSWORD_ADMIN: ${GAME_PASSWORD_ADMIN:?set GAME_PASSWORD_ADMIN in /opt/reforger-server/.env}
+      GAME_SCENARIO_ID: ${GAME_SCENARIO_ID:?set GAME_SCENARIO_ID in /opt/reforger-server/.env}
+      GAME_MODS_IDS_LIST: ${GAME_MODS_IDS_LIST:-61B514B96692C049}
+      GAME_MAX_PLAYERS: ${GAME_MAX_PLAYERS:-8}
+      GAME_VISIBLE: ${GAME_VISIBLE:-true}
+      GAME_SUPPORTED_PLATFORMS: PLATFORM_PC
+      GAME_PROPS_BATTLEYE: "true"
+      GAME_PROPS_DISABLE_THIRD_PERSON: "false"
+      GAME_PROPS_FAST_VALIDATION: "true"
+      GAME_PROPS_SERVER_MAX_VIEW_DISTANCE: "2500"
+      GAME_PROPS_SERVER_MIN_GRASS_DISTANCE: "50"
+      GAME_PROPS_NETWORK_VIEW_DISTANCE: "1600"
+      ARMA_MAX_FPS: ${ARMA_MAX_FPS:-60}
+      # Conflict PvE resumes its save; the Kolguyev war mode starts clean (ARMA_PARAMS="" and
+      # PERSISTENCE_LOAD_SESSION_SAVE=false): a loaded session would bring back AI the mod no longer tracks.
+      ARMA_PARAMS: ${ARMA_PARAMS--loadSessionSave}
+      OPERATING_AI_LIMIT: ${OPERATING_AI_LIMIT:-192}
+      OPERATING_LOBBY_PLAYER_SYNCHRONISE: "true"
+      PERSISTENCE_AUTO_SAVE_INTERVAL: "10"
+      PERSISTENCE_LOAD_SESSION_SAVE: ${PERSISTENCE_LOAD_SESSION_SAVE:-true}
+      PERSISTENCE_KEEP_SESSION_SAVE: "true"
+    ports:
+      - '${GAME_PORT:-2001}:${GAME_PORT:-2001}/udp'
+      - '${A2S_PORT:-17777}:${A2S_PORT:-17777}/udp'
+      # Loopback only. Game and A2S stay on the public IP.
+      - '127.0.0.1:${RCON_PORT:-19999}:${RCON_PORT:-19999}/udp'
+    volumes:
+      # Game install stays on the host so a recreate does not re-download ~10 GB.
+      - ./install:/reforger
+      - ./config:/reforger/Configs
+      - ./profile:/home/profile
+      - ./workshop:/reforger/workshop
+    deploy:
+      resources:
+        limits:
+          cpus: "3.5"
+          memory: 10G
+        reservations:
+          memory: 4G
+    mem_limit: 10g
+    cpus: 3.5
+    stop_grace_period: 2m

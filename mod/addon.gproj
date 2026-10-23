@@ -1,0 +1,8 @@
+GameProject {
+ ID "CBPNK_KolguyevWar"
+ GUID "53D18422A46F789F"
+ TITLE "CBPNK Kolguyev War"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
