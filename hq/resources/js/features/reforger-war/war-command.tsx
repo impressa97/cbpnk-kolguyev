@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import type { WarCommand, WarRealtime } from '@/lib/schemas/reforger';
+import type { WarCommand } from '@/lib/schemas/reforger';
 import { uiText } from '@/lib/ui-tokens';
 import { usePage } from '@inertiajs/react';
 import { Radio, RadioTower, Shield } from 'lucide-react';
@@ -59,9 +59,9 @@ const FIRST_DRAFT: Draft = {
  * bottom edge (pick, orders, HQ fire, send); under it the squad manager (men, care,
  * reinforcements) beside Headquarters and the radio. Only what your side knows is on the page.
  */
-export function WarCommandPanel({ war: initial, realtime = null }: { war: WarCommand; realtime?: WarRealtime | null }) {
-    // Live: every bridge tick the server pushes this commander's desk over Reverb.
-    const { war, link } = useWarLive(initial, realtime);
+export function WarCommandPanel({ war: initial }: { war: WarCommand }) {
+    // Live: the page polls GET /desk and swaps this commander's desk in place.
+    const { war, link } = useWarLive(initial);
     const light = useFeedLight(war.feed, link);
     const errors = usePage().props.errors as Record<string, string | undefined>;
     const [draft, setDraft] = useState<Draft>(FIRST_DRAFT);

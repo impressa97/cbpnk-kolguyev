@@ -1,4 +1,4 @@
-import { WarCommandSchema, type WarCommand, type WarRealtime } from '@/lib/schemas/reforger';
+import { WarCommandSchema, type WarCommand } from '@/lib/schemas/reforger';
 import { useEffect, useState } from 'react';
 
 export type WarLink = 'off' | 'connecting' | 'live' | 'lost';
@@ -39,7 +39,7 @@ export function useFeedLight(feed: WarCommand['feed'], link: WarLink): WarFeedLi
  * The war desk, live. Starts from the page props and replaces them from GET /desk every couple
  * of seconds. A commander's own order still wins, because Inertia reloads the props.
  */
-export function useWarLive(initial: WarCommand, _realtime: WarRealtime | null): { war: WarCommand; link: WarLink; pushedAt: number | null } {
+export function useWarLive(initial: WarCommand): { war: WarCommand; link: WarLink; pushedAt: number | null } {
     const [war, setWar] = useState(initial);
     const [link, setLink] = useState<WarLink>('connecting');
     const [pushedAt, setPushedAt] = useState<number | null>(null);

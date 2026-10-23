@@ -21,7 +21,6 @@ export function Palette({ war, squad, draft, onKind }: { war: WarCommand; squad:
                 type="single"
                 variant="outline"
                 size="sm"
-                spacing={1}
                 className="flex-wrap justify-start"
                 value={(group.kinds as readonly string[]).includes(draft.kind) ? draft.kind : ''}
                 onValueChange={(kind) => kind && onKind(kind as SquadOrderKind)}

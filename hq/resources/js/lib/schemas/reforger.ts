@@ -1,29 +1,5 @@
 import { z } from 'zod';
 
-const ReforgerConnectionSchema = z
-    .object({
-        host: z.string(),
-        port: z.number(),
-        query_port: z.number(),
-        address: z.string(),
-        server_name: z.string(),
-        password: z.string(),
-        scenario: z.string(),
-        max_players: z.number(),
-        ai_limit: z.number(),
-        version: z.string(),
-    })
-    .strict();
-
-const ReforgerGuideSchema = z
-    .object({
-        tagline: z.string(),
-        join: z.string(),
-        mods: z.string(),
-        auth: z.string(),
-    })
-    .strict();
-
 export const WarSideSchema = z.enum(['us', 'ussr', 'fia']);
 
 /** What a man does in a fight, for his symbol (WarEconomy::roleClass). */

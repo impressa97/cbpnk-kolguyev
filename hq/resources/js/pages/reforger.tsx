@@ -19,7 +19,7 @@ export default function ReforgerPage({ war, server }: { war: WarCommand; server:
                 <span>{server.name}</span>
                 <span>{server.password === '' ? 'open' : `password ${server.password}`}</span>
             </div>
-            <WarCommandPanel war={war} realtime={null} />
+            <WarCommandPanel war={war} />
         </div>
     );
 }

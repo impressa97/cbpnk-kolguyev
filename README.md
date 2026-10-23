@@ -14,6 +14,8 @@ The mod talks in squad and soldier ids. It does not know about city players.
 
 ## Headquarters
 
+Headquarters needs PHP 8.3 or newer, Composer, and Node.
+
 ```bash
 cd hq
 composer install

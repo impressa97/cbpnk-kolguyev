@@ -29,7 +29,6 @@ export function FirePanel({ war, draft, onFire, onCallFire, onFocus }: CommandPr
             <ToggleGroup
                 type="single"
                 variant="outline"
-                spacing={1}
                 className={cn('grid w-full', 'grid-cols-4')}
                 value={draft.fire ?? ''}
                 onValueChange={(id) => onFire(id || null)}

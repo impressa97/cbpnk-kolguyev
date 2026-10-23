@@ -89,7 +89,6 @@ export function CommandPanel(props: CommandProps) {
                         <ToggleGroup
                             type="single"
                             size="sm"
-                            spacing={1}
                             className="w-max pb-2"
                             value={selected ? String(selected.id) : ''}
                             aria-label="Your squads"

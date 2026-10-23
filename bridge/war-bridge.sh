@@ -6,7 +6,8 @@ set -euo pipefail
 
 # The server runs with -profile /home/profile, and the game's $profile: is its profile/ subfolder
 # (where it keeps .save); the mod reads $profile:cbpnk-war/.
-PROFILE="${REFORGER_WAR_PROFILE:-/opt/reforger-server/profile/profile/cbpnk-war}"
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+PROFILE="${REFORGER_WAR_PROFILE:-$ROOT/server/profile/profile/cbpnk-war}"
 ORDERS_URL="${REFORGER_WAR_ORDERS_URL:-http://127.0.0.1:8000/api/reforger/war/orders?format=tsv}"
 STATE_URL="${REFORGER_WAR_STATE_URL:-http://127.0.0.1:8000/api/reforger/war/state}"
 SECRET="${REFORGER_BRIDGE_SECRET:-}"

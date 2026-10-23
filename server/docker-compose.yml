@@ -2,7 +2,7 @@
 # Steam app 1874900 via ghcr.io/acemod/arma-reforger (anonymous login).
 # First start downloads the server (~10 GB). Profile and saves stay in ./profile.
 #
-#   cd /opt/reforger-server && docker compose up -d
+#   docker compose -f server/docker-compose.yml -f server/docker-compose.war.yml up -d
 #
 # Ops: docs/REFORGER.md
 services:

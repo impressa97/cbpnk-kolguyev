@@ -8,7 +8,7 @@ import { describe, expect, it } from 'vitest';
  * tests/Feature/ReforgerWarHqTest.php writes it: every list with rows. The PHP test fails when
  * the desk changes shape; this one fails when the page's schema no longer reads it.
  */
-const desk: unknown = JSON.parse(readFileSync(resolve(__dirname, '../__fixtures__/war-desk.json'), 'utf8'));
+const desk: unknown = JSON.parse(readFileSync(resolve(import.meta.dirname, '../__fixtures__/war-desk.json'), 'utf8'));
 
 describe('war desk contract', () => {
     it('reads the desk the server builds', () => {
