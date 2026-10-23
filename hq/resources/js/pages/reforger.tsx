@@ -4,7 +4,6 @@ import type { WarCommand } from '@/lib/schemas/reforger';
 type ServerCard = {
     host: string;
     port: number;
-    name: string;
     password: string;
 };
 
@@ -16,7 +15,6 @@ export default function ReforgerPage({ war, server }: { war: WarCommand; server:
                 <span>
                     {server.host}:{server.port}
                 </span>
-                <span>{server.name}</span>
                 <span>{server.password === '' ? 'open' : `password ${server.password}`}</span>
             </div>
             <WarCommandPanel war={war} />

@@ -1,10 +1,8 @@
 <?php
 
 /**
- * Shared Arma Reforger dedicated server (Docker on prod: /opt/reforger-server).
- * Conflict PvE Remixed on Kolguyev. Players are US, USSR is AI. No city-skill bridge.
- *
- * Ops: docs/REFORGER.md
+ * Kolguyev war. The dedicated server is server/ (see docs/REFORGER.md).
+ * Metres: south-west origin, X east, Z north. Terrain is 12.8 km × 12.8 km.
  */
 
 return [
@@ -14,58 +12,11 @@ return [
     'host' => env('REFORGER_HOST', '127.0.0.1'),
     'port' => (int) env('REFORGER_PORT', 2001),
     'query_port' => (int) env('REFORGER_QUERY_PORT', 17777),
-    'server_name' => env('REFORGER_SERVER_NAME', 'qpstall'),
     'password' => env('REFORGER_PASSWORD', ''),
-    'scenario' => env('REFORGER_SCENARIO', 'Conflict PvE · Kolguyev'),
-    'max_players' => (int) env('REFORGER_MAX_PLAYERS', 8),
     'ai_limit' => (int) env('REFORGER_AI_LIMIT', 192),
-    'version' => env('REFORGER_VERSION', 'stable'),
-
-    // While the war mod reports (deploy/reforger/war-mode.sh on), the page says so instead.
-    'war_mode' => [
-        'scenario' => 'Kolguyev war · Game Master',
-        'tagline' => 'The Kolguyev war: command your AI squads from this page, join the server to fight beside them',
-        'join' => 'Multiplayer → Server Browser. Search qpstall, or Direct Connect with the IP and game port. The client downloads the CBPNK War mod on join. Deploy on your side\'s home.',
-        'mods' => 'CBPNK War (server scripting for the squads this page commands). Subscribe when the game asks, then connect again.',
-    ],
-
-    'guide' => [
-        'tagline' => 'Conflict PvE on Kolguyev · play the US, USSR AI counterattacks',
-        'join' => 'Multiplayer → Server Browser. Search qpstall, or Direct Connect with the IP and game port. No join password. The client downloads Conflict PvE Remixed on join.',
-        'mods' => 'Conflict PvE Remixed. Deploy as the US. Subscribe when the game asks, then connect again.',
-        'auth' => 'No city-skill bridge. Admin login is #login in chat; the admin password stays on the host.',
-    ],
 
     /**
-     * @var list<array{id: string, name: string, detail: string}>
-     */
-    'features' => [
-        [
-            'id' => 'scenario',
-            'name' => 'Conflict PvE · Kolguyev',
-            'detail' => 'Capture towns. USSR sends counterattacks, vehicle patrols, and artillery',
-        ],
-        [
-            'id' => 'ai',
-            'name' => 'Enemy war',
-            'detail' => 'Bases, patrols, and civilians stay active. Deploy as the US',
-        ],
-        [
-            'id' => 'slots',
-            'name' => '8 slots',
-            'detail' => 'PC only, listed in the server browser',
-        ],
-        [
-            'id' => 'save',
-            'name' => 'Same war',
-            'detail' => 'Captured bases stay captured after a restart',
-        ],
-    ],
-
-    /**
-     * Continuous three-side war on Kolguyev. The dedicated server stays on the
-     * current scenario until the command mod is packed and loaded.
-     * Metres: south-west origin, X east, Z north. Terrain is 12.8 km × 12.8 km.
+     * Continuous three-side war on Kolguyev.
      */
     'war' => [
         'world_size' => 12800,

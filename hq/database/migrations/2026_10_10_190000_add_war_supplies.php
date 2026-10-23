@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 /**
  * Kolguyev treasury: supplies accrue on the enlistment and pay for squad upgrades.
- * Separate from city credits.
  */
 return new class extends Migration
 {

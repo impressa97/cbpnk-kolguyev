@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\EnsureBridgeSecret;
 use App\Http\Middleware\HandleInertiaRequests;
+use App\Http\Middleware\UseLocalCommander;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -21,6 +22,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'bridge' => EnsureBridgeSecret::class,
         ]);
         $middleware->web(append: [
+            UseLocalCommander::class,
             HandleInertiaRequests::class,
             AddLinkHeadersForPreloadedAssets::class,
         ]);

@@ -14,6 +14,14 @@ use Illuminate\Support\Carbon;
 
 uses(RefreshDatabase::class);
 
+it('opens the desk as the local commander, with no account', function () {
+    $this->get('/')
+        ->assertOk()
+        ->assertInertia(fn ($page) => $page
+            ->component('reforger')
+            ->where('war.enlisted_side', null));
+});
+
 it('shows an empty kolguyev command on the reforger page', function () {
     $user = User::factory()->create();
 

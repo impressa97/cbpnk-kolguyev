@@ -7,12 +7,15 @@ export default defineConfig({
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
-            ssr: 'resources/js/ssr.jsx',
             refresh: true,
         }),
         react(),
         tailwindcss(),
     ],
+    build: {
+        // The desk ships the Kolguyev map in one file. That file is larger than Vite's default notice.
+        chunkSizeWarningLimit: 1600,
+    },
     test: {
         environment: 'node',
     },

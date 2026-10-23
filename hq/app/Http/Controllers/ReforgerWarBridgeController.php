@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Actions\Reforger\ExportWarOrdersAction;
 use App\Actions\Reforger\IngestWarStateAction;
-use App\Actions\Reforger\PushWarDeskAction;
 use App\Enums\WarOrderStatus;
 use App\Support\WarBridgeCodec;
 use Illuminate\Http\JsonResponse;
@@ -76,8 +75,6 @@ class ReforgerWarBridgeController extends Controller
 
         $decoded = WarBridgeCodec::decodeState((string) $request->getContent());
         $ingest->ingest($decoded);
-        // Commanders' desks go out once the bridge has its answer.
-        dispatch(fn () => app(PushWarDeskAction::class)->push())->afterResponse();
 
         return response()->json(['ok' => true]);
     }

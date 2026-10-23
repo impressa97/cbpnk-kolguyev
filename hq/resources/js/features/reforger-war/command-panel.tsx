@@ -80,7 +80,8 @@ export function CommandPanel(props: CommandProps) {
 
     return (
         <Card className="pointer-events-auto gap-2 bg-card/95 p-2 shadow-lg backdrop-blur-sm" data-testid="command-panel">
-            <div className="flex items-center gap-1.5">
+            {/* The squad row keeps pb-2 for its scrollbar. Align to the top so that gutter does not drop the mode buttons and the fold control. */}
+            <div className="flex items-start gap-1.5">
                 {modes}
                 {draft.hq ? (
                     <span className="min-w-0 flex-1 px-1 text-xs font-medium">HQ fire on call</span>
@@ -103,7 +104,7 @@ export function CommandPanel(props: CommandProps) {
                     type="button"
                     size="icon-sm"
                     variant="ghost"
-                    className="shrink-0"
+                    className="size-9 shrink-0"
                     aria-label={open ? 'Fold the console' : 'Open the console'}
                     onClick={() => setOpen(!open)}
                 >

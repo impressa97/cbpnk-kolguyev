@@ -1,4 +1,4 @@
-# Arma Reforger dedicated — Conflict PvE Remixed, Kolguyev. US vs USSR AI.
+# Kolguyev war dedicated server.
 # Steam app 1874900 via ghcr.io/acemod/arma-reforger (anonymous login).
 # First start downloads the server (~10 GB). Profile and saves stay in ./profile.
 #
@@ -22,13 +22,13 @@ services:
       SERVER_A2S_PORT: ${A2S_PORT:-17777}
       RCON_ADDRESS: "0.0.0.0"
       RCON_PORT: ${RCON_PORT:-19999}
-      RCON_PASSWORD: ${RCON_PASSWORD:?set RCON_PASSWORD in /opt/reforger-server/.env}
+      RCON_PASSWORD: ${RCON_PASSWORD:?set RCON_PASSWORD in server/.env}
       RCON_PERMISSION: admin
-      GAME_NAME: ${GAME_NAME:-qpstall}
+      GAME_NAME: ${GAME_NAME:-Kolguyev}
       GAME_PASSWORD: ${GAME_PASSWORD:-}
-      GAME_PASSWORD_ADMIN: ${GAME_PASSWORD_ADMIN:?set GAME_PASSWORD_ADMIN in /opt/reforger-server/.env}
-      GAME_SCENARIO_ID: ${GAME_SCENARIO_ID:?set GAME_SCENARIO_ID in /opt/reforger-server/.env}
-      GAME_MODS_IDS_LIST: ${GAME_MODS_IDS_LIST:-61B514B96692C049}
+      GAME_PASSWORD_ADMIN: ${GAME_PASSWORD_ADMIN:?set GAME_PASSWORD_ADMIN in server/.env}
+      GAME_SCENARIO_ID: ${GAME_SCENARIO_ID:?set GAME_SCENARIO_ID in server/.env}
+      GAME_MODS_IDS_LIST: ${GAME_MODS_IDS_LIST:-}
       GAME_MAX_PLAYERS: ${GAME_MAX_PLAYERS:-8}
       GAME_VISIBLE: ${GAME_VISIBLE:-true}
       GAME_SUPPORTED_PLATFORMS: PLATFORM_PC
@@ -39,8 +39,8 @@ services:
       GAME_PROPS_SERVER_MIN_GRASS_DISTANCE: "50"
       GAME_PROPS_NETWORK_VIEW_DISTANCE: "1600"
       ARMA_MAX_FPS: ${ARMA_MAX_FPS:-60}
-      # Conflict PvE resumes its save; the Kolguyev war mode starts clean (ARMA_PARAMS="" and
-      # PERSISTENCE_LOAD_SESSION_SAVE=false): a loaded session would bring back AI the mod no longer tracks.
+      # The war compose starts clean (loadSessionSave false): a loaded session would bring
+      # back AI bodies and vehicles the mod no longer tracks.
       ARMA_PARAMS: ${ARMA_PARAMS--loadSessionSave}
       OPERATING_AI_LIMIT: ${OPERATING_AI_LIMIT:-192}
       OPERATING_LOBBY_PLAYER_SYNCHRONISE: "true"

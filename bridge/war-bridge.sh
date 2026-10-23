@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # Pull Kolguyev war orders into the Reforger profile and push squad state back.
 # The mod reads $profile:cbpnk-war/ and ignores the directory until `enabled` exists.
-# Set REFORGER_WAR_ENABLE=1 only after the command mod is loaded in place of Conflict PvE.
+# Set REFORGER_WAR_ENABLE=1 once the packed addon is what the server is running.
 set -euo pipefail
 
 # The server runs with -profile /home/profile, and the game's $profile: is its profile/ subfolder
 # (where it keeps .save); the mod reads $profile:cbpnk-war/.
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 PROFILE="${REFORGER_WAR_PROFILE:-$ROOT/server/profile/profile/cbpnk-war}"
-ORDERS_URL="${REFORGER_WAR_ORDERS_URL:-http://127.0.0.1:8000/api/reforger/war/orders?format=tsv}"
-STATE_URL="${REFORGER_WAR_STATE_URL:-http://127.0.0.1:8000/api/reforger/war/state}"
+ORDERS_URL="${REFORGER_WAR_ORDERS_URL:-http://127.0.0.1:8001/api/reforger/war/orders?format=tsv}"
+STATE_URL="${REFORGER_WAR_STATE_URL:-http://127.0.0.1:8001/api/reforger/war/state}"
 SECRET="${REFORGER_BRIDGE_SECRET:-}"
 INTERVAL="${REFORGER_WAR_INTERVAL:-5}"
 

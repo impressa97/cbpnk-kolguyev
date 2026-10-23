@@ -33,13 +33,12 @@ class ReforgerController extends Controller
         return $user;
     }
 
-    /** @return array{host: string, port: int, name: string, password: string} */
+    /** @return array{host: string, port: int, password: string} */
     private function server(): array
     {
         return [
             'host' => (string) config('reforger.host'),
             'port' => (int) config('reforger.port'),
-            'name' => (string) config('reforger.server_name'),
             'password' => (string) config('reforger.password'),
         ];
     }

@@ -1,10 +1,10 @@
-# Kolguyev war mode: an override for docker-compose.yml, used by war-mode.sh on.
+# Kolguyev war: an override for docker-compose.yml.
 #
 # The server starts in its command-line mode (-server + -addons) instead of the image's
 # launcher with a -config file: with a config every mod must be on the Workshop, this way the
-# CBPNK War addon is loaded from profile/localaddons as Workbench packs it (-packAddon) and
-# nothing has to be published. Scenario: the vanilla Game Master Kolguyev (no Conflict AI).
-# Clean start every time: no session save, the mod rebuilds the island from the site.
+# addon is loaded from profile/localaddons as Workbench packs it (-packAddon) and
+# nothing has to be published. Scenario: the vanilla Game Master Kolguyev.
+# Clean start every time: no session save, the mod rebuilds the island from the headquarters.
 services:
   reforger:
     working_dir: /reforger

@@ -1,5 +1,5 @@
-# Pack the Kolguyev war mod with Arma Reforger Tools and drop it into the local test server.
-#   pwsh scripts/reforger/pack-war-mod.ps1 [-Source <repo>] [-Out <dir>]
+# Pack the Kolguyev war mod with Arma Reforger Tools and drop it where the dedicated server loads it.
+#   pwsh scripts/pack-war-mod.ps1 [-Source <mod>] [-LocalServerAddon <dir>]
 # Workbench packs from a Windows path, so the WSL clone's mod is mirrored to -Mirror first.
 param(
     [string]$Source = '\\wsl.localhost\Ubuntu\home\impressa\projects\cbpnk-kolguyev\mod',
@@ -7,7 +7,7 @@ param(
     [string]$Out = "$env:TEMP\cbpnk-war-pack",
     [string]$Game = 'A:\Steam\steamapps\common\Arma Reforger',
     [string]$Tools = 'A:\Steam\steamapps\common\Arma Reforger Tools\Workbench\ArmaReforgerWorkbenchSteamDiag.exe',
-    [string]$LocalServerAddon = '\\wsl.localhost\Ubuntu\home\impressa\reforger-local\profile\localaddons\CBPNKWar_53D18422A46F789F'
+    [string]$LocalServerAddon = '\\wsl.localhost\Ubuntu\home\impressa\projects\cbpnk-kolguyev\server\profile\localaddons\CBPNKWar_53D18422A46F789F'
 )
 $ErrorActionPreference = 'Stop'
 

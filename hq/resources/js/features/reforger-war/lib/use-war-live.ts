@@ -39,10 +39,9 @@ export function useFeedLight(feed: WarCommand['feed'], link: WarLink): WarFeedLi
  * The war desk, live. Starts from the page props and replaces them from GET /desk every couple
  * of seconds. A commander's own order still wins, because Inertia reloads the props.
  */
-export function useWarLive(initial: WarCommand): { war: WarCommand; link: WarLink; pushedAt: number | null } {
+export function useWarLive(initial: WarCommand): { war: WarCommand; link: WarLink } {
     const [war, setWar] = useState(initial);
     const [link, setLink] = useState<WarLink>('connecting');
-    const [pushedAt, setPushedAt] = useState<number | null>(null);
 
     useEffect(() => setWar(initial), [initial]);
 
@@ -63,7 +62,6 @@ export function useWarLive(initial: WarCommand): { war: WarCommand; link: WarLin
                     setWar(parsed.data);
                 }
                 setLink('live');
-                setPushedAt(Date.now());
             } catch {
                 if (!stop) {
                     setLink('lost');
@@ -80,5 +78,5 @@ export function useWarLive(initial: WarCommand): { war: WarCommand; link: WarLin
         };
     }, []);
 
-    return { war, link, pushedAt };
+    return { war, link };
 }

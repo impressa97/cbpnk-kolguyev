@@ -4,7 +4,6 @@ export const WarSideSchema = z.enum(['us', 'ussr', 'fia']);
 
 /** What a man does in a fight, for his symbol (WarEconomy::roleClass). */
 export const WarRoleClassSchema = z.enum(['leader', 'mg', 'at', 'marksman', 'medic', 'sapper', 'radio', 'grenadier', 'scout', 'rifle']);
-export type WarRoleClass = z.infer<typeof WarRoleClassSchema>;
 
 /** Mirrors App\Enums\WarOrderKind: the game's commanding-menu commands, plus rest and the operations. */
 export const WarOrderKindSchema = z.enum([
@@ -519,36 +518,8 @@ export const WarCommandSchema = z
     })
     .strict();
 
-/** Where the page's Echo connects for live desk pushes (Reverb, Pusher protocol). */
-export const WarRealtimeSchema = z
-    .object({
-        key: z.string(),
-        host: z.string(),
-        port: z.number(),
-        scheme: z.enum(['http', 'https']),
-        channel: z.string(),
-    })
-    .strict();
-
-/**
- * `war.desk` on the commander's private channel: the whole desk after a bridge tick, and the
- * build the server runs (the Inertia asset version): a page from another build reloads.
- */
-export const WarDeskPushSchema = z.object({ war: WarCommandSchema, version: z.string().nullable().optional() }).strict();
-
 export type WarCommand = z.infer<typeof WarCommandSchema>;
-export type WarRealtime = z.infer<typeof WarRealtimeSchema>;
-export type WarOrderMarker = z.infer<typeof WarOrderMarkerSchema>;
 export type WarRole = z.infer<typeof WarRoleSchema>;
-export type WarContact = z.infer<typeof WarContactSchema>;
-export type WarWorld = z.infer<typeof WarWorldSchema>;
-export type WarVehicle = z.infer<typeof WarVehicleSchema>;
-export type WarSupportOffer = z.infer<typeof WarSupportOfferSchema>;
-export type WarSupportRequest = z.infer<typeof WarSupportRequestSchema>;
-export type WarTask = z.infer<typeof WarTaskSchema>;
-export type WarObjective = z.infer<typeof WarObjectiveSchema>;
-export type WarControl = z.infer<typeof WarControlSchema>;
 export type WarSoldierRow = z.infer<typeof WarSoldierSchema>;
-export type WarSoldierMarker = z.infer<typeof WarSoldierMarkerSchema>;
 export type WarEvent = z.infer<typeof WarEventSchema>;
 export type WarSideId = z.infer<typeof WarSideSchema>;

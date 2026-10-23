@@ -1,8 +1,8 @@
-# Kolguyev war — website HQ for AI squads
+# Kolguyev war
 
-Continuous three-side war on the Arma Reforger dedicated server. A war lasts seven real days. A commander registers on the headquarters, leads AI squads of named soldiers from the desk, and may also deploy in the client on that same side. Commanders run the fighting and the operations themselves. HQ is the backbone: support on call, squads of its own to secure ground, objectives with bounties, and the motor pool. When the week ends, the roster stays as a record and the island stands down. The next week starts when someone enlists again.
+Continuous three-side war on the Arma Reforger dedicated server. A war lasts seven real days. The headquarters is one local commander. They lead AI squads of named soldiers from the desk, and may also deploy in the client on that same side. Commanders run the fighting and the operations themselves. HQ is the backbone: support on call, squads of its own to secure ground, objectives with bounties, and the motor pool. When the week ends, the roster stays as a record and the island stands down. The next week starts when someone enlists again.
 
-The dedicated server runs the Game Master scenario from [REFORGER.md](REFORGER.md). Do not also load Conflict PvE: its AI and the commanders' squads share the AI budget.
+Launch the headquarters, the packed addon, and the dedicated server together: [README](../README.md), with server detail in [REFORGER.md](REFORGER.md). The server runs vanilla Game Master Kolguyev plus this addon. Do not add another scenario's AI on the same server: those soldiers and the commanders' squads share the AI budget.
 
 | Piece | Path |
 |-------|------|
@@ -15,21 +15,11 @@ The dedicated server runs the Game Master scenario from [REFORGER.md](REFORGER.m
 | Mod source | `mod/` (`addon.gproj`, `Scripts/Game/War/*.c`) |
 | Tests | `cd hq && php artisan test --filter=ReforgerWar` |
 
-## Status (2026-10-11)
+## Status
 
-Checked against the game data in the local install (`addons/data` paks: vanilla scripts, entity catalogs, `CTI_Campaign_Cain.ent`, `Cain.ent`, string tables). Every prefab GUID, script class, and method the mod uses exists in the vanilla scripts; nothing has been compiled in Workbench yet.
+The addon packs with `scripts/pack-war-mod.ps1` and the server loads it from `server/profile/localaddons`. Launch steps are in the [README](../README.md).
 
-First-commit fixes: `protected override OnGameStart`; squads spawn empty `Group_Base.et` + `SetFaction` (the old catalog-group-then-delete raced vanilla's delayed member spawn, and the USSR has no `FireTeam`); squad position from the leader; spawns on `FindEmptyTerrainPosition`; deaths reported per soldier; extra squads step inland (Kamensk squads were in the sea); Airport 280 m off; the page leaked every side's squads and orders; `addon.gproj` added.
-
-Last check against the game data was 2026-10-11. The headquarters tests are `cd hq && php artisan test`. The desk has not been clicked through with a live server.
-
-### Left
-
-1. Open `mod/addon.gproj` in Arma Reforger Tools, compile, and pack with `scripts/pack-war-mod.ps1`. Run on the vanilla Kolguyev Game Master scenario `{F45C6C15D31252E6}Missions/27_GM_Cain.conf` (no Conflict AI; US, USSR, FIA present). The war compose sets `-loadSessionSave false`: a loaded session would bring back AI bodies and vehicles the mod no longer tracks. `REFORGER_WAR_ENABLE=1` writes `$profile:cbpnk-war/enabled`.
-2. In game, confirm: `SpawnPoint_US/USSR/FIA` show in the deploy menu; AI board with `AIWaypoint_GetIn` and drive on the next move; fire missions (Game Master effect modules) land; `FullHeal` at home and beside an ambulance; the `WORLD` line parses.
-3. Lock the Arma client slot to the enlisted side. The headquarters does not do that yet.
-
-### Resume
+Still to confirm in a client: spawn points in the deploy menu, boarding and driving, fire missions, `FullHeal` at home and beside an ambulance, the `WORLD` line, and locking the client slot to the enlisted side. The headquarters does not lock the slot yet.
 
 ```bash
 cd hq
@@ -37,7 +27,7 @@ php artisan test --filter=ReforgerWar
 vendor/bin/pint --dirty
 ```
 
-War rows belong to `users.id` (`commander_id`). Auth JSON `user_id` is that same account.
+War rows belong to `users.id` (`commander_id`).
 
 ### Code map
 
@@ -53,7 +43,7 @@ War rows belong to `users.id` (`commander_id`). Auth JSON `user_id` is that same
 | HQ desk | `RequestWarSupportAction`, `ManageWarTaskAction`, `OrderWarVehicleAction`, `ReforgerWarHqController` |
 | Page data (fog of war) | `BuildWarCommandDataAction` |
 | Page | `hq/resources/js/features/reforger-war/` (`war-command`, `hq-header`, `hq-desk`, `orders-panel`, `army-panel`, `kolguyev-map`, `map/*`, `lib/use-war-live`) |
-| Desk refresh | The page polls `GET /desk`. `PushWarDeskAction` rebuilds that payload. |
+| Desk refresh | The page polls `GET /desk`. `BuildWarCommandDataAction` builds that payload. |
 | Contract | `hq/resources/js/lib/schemas/reforger.ts` |
 | Map labels from the game | `hq/resources/js/lib/generated/kolguyev-locations.ts` ← `scripts/extract-kolguyev-locations.py "<Reforger install>"` |
 | Mod | `CBPNK_WarBridge.c` (core), `CBPNK_WarCondition.c`, `CBPNK_WarMotorPool.c`, `CBPNK_WarSupport.c`, `CBPNK_WarWorld.c` |
@@ -65,7 +55,7 @@ War rows belong to `users.id` (`commander_id`). Auth JSON `user_id` is that same
 - Sides: US (BLUFOR), USSR (OPFOR), FIA (INDFOR). A side sticks for the week. The week starts when the first player enlists and ends at `ends_at`, seven real days later. `WEEK 0` stands the island down.
 - One commander starts with one free squad of 4 named riflemen and may raise three more at 160 each. Each musters 200 m further from home toward the island centre. A squad stops at 12.
 - Each soldier is ordered by name, with a private note and a role from that side's vanilla infantry catalog, at that role's price. Hours on the island raise every stat by 1, up to 24. Training into another role costs that role's price and keeps the hours. Squad training: Green → Regular (80) → Veteran (200).
-- Supplies start at 80 and earn 40 an hour plus territory income, collected on the next visit; passive income stops at 400, bounties do not. They are the war treasury, separate from city credits.
+- Supplies start at 80 and earn 40 an hour plus territory income, collected on the next visit; passive income stops at 400, bounties do not. They are the war treasury.
 - New men, replacements, and returns from the reserve appear at the side's spawn on free ground, as a player respawns at a base, and walk to the group; nobody materialises beside a squad in the field.
 - The server AI cap (`REFORGER_AI_LIMIT`, 192) counts soldiers in the field. The reserve at base is off the island and off the cap.
 
@@ -214,7 +204,7 @@ A side a commander enlists on gets no new AI squads; the ones out there carry on
 
 ## Live desk
 
-After every bridge tick the headquarters advances the week and rebuilds each commander's desk (`PushWarDeskAction`). The page polls `GET /desk` every couple of seconds, swaps that JSON in place, and markers glide to their new ground. The light on the map says what is behind it: **Live** (the mod reported in the last 30 s), **No feed** (the server is offline or the war mod is not running), **Link lost** (the poll failed).
+After every bridge tick the headquarters advances the week. The page polls `GET /desk` every couple of seconds, swaps that JSON in place, and markers glide to their new ground. The light on the map says what is behind it: **Live** (the mod reported in the last 30 s), **No feed** (the server is offline or the war mod is not running), **Link lost** (the poll failed).
 
 ## Bridge files
 
@@ -222,10 +212,10 @@ After every bridge tick the headquarters advances the week and rebuilds each com
 
 ```bash
 bridge/war-bridge.sh                            # one sync
-REFORGER_WAR_ENABLE=1 bridge/war-bridge.sh --loop   # every 5 s once the mod is on the server
+REFORGER_BRIDGE_SECRET=change-me REFORGER_WAR_ENABLE=1 bridge/war-bridge.sh --loop
 ```
 
-`bridge/reforger-war-bridge.service` is the same loop as a systemd unit. It needs `REFORGER_WAR_ENABLE=1` and `REFORGER_BRIDGE_SECRET`. Turning it on: pack the mod, start the war compose, set the secret and the headquarters URL, then enable the unit.
+`bridge/reforger-war-bridge.service` is the same loop as a systemd unit. It needs `REFORGER_WAR_ENABLE=1` and `REFORGER_BRIDGE_SECRET` from `hq/.env`. Turning it on: pack the mod, start the war compose, set the secret, then enable the unit. The full order is in the [README](../README.md).
 
 `orders.tsv`, in this order (vehicles before orders, so a boarding order finds its vehicle):
 

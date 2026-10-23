@@ -1,14 +1,14 @@
 [Unit]
-Description=CBPNK Kolguyev war bridge (site orders.tsv <-> Reforger mod state.tsv)
+Description=Kolguyev war bridge (headquarters orders.tsv, Reforger mod state.tsv)
 After=network-online.target docker.service
 Wants=network-online.target
 
 [Service]
 Type=simple
-User=root
-EnvironmentFile=-/opt/reforger-server/.env
-EnvironmentFile=-/opt/cbpnk-kolguyev/hq/.env
-ExecStart=/opt/reforger-server/bin/war-bridge.sh --loop
+# Replace /path/to/cbpnk-kolguyev with this checkout. The headquarters .env holds REFORGER_BRIDGE_SECRET.
+Environment=REFORGER_WAR_ENABLE=1
+EnvironmentFile=-/path/to/cbpnk-kolguyev/hq/.env
+ExecStart=/path/to/cbpnk-kolguyev/bridge/war-bridge.sh --loop
 Restart=always
 RestartSec=5
 
